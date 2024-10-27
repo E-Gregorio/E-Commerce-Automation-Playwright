@@ -13,16 +13,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3 # Asegúrate de que sea v3
+    - name: Check out code
+      uses: actions/checkout@v3 # Asegúrate de que esta sea la última versión
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v3 # Asegúrate de que sea v3
+    - name: Setup Node.js
+      uses: actions/setup-node@v3 # Asegúrate de que esta sea la última versión
       with:
-        node-version: '20' # Asegúrate de que la versión sea la correcta
+        node-version: '20' # Especifica Node.js 20
 
     - name: Install dependencies
       run: npm install
 
-    - name: Run Playwright tests
+    - name: Run tests
       run: npm test
