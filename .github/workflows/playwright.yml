@@ -12,14 +12,17 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    env: # Aquí comienzas a definir las variables de entorno
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE20: true
+
     steps:
     - name: Check out code
-      uses: actions/checkout@v3 # Asegúrate de que esta sea la última versión
+      uses: actions/checkout@v3 # Asegúrate de que esta sea la versión más reciente
 
     - name: Setup Node.js
-      uses: actions/setup-node@v3 # Asegúrate de que esta sea la última versión
+      uses: actions/setup-node@v3 # Asegúrate de que esta sea la versión más reciente
       with:
-        node-version: '20' # Especifica Node.js 20
+        node-version: '20' # Especifica la versión 20
 
     - name: Install dependencies
       run: npm install
