@@ -1,0 +1,14 @@
+# config.yml
+tests:
+- name: Test de inicio de sesión
+  description: Validar que un usuario puede iniciar sesión con credenciales válidas
+  expected: "Inicio de sesión exitoso"
+- name: Test de registro
+  description: Validar que un nuevo usuario puede registrarse
+  expected: "Registro exitoso"
+
+playwright:
+  browsers:
+  - chromium
+  - firefox
+  - webkit
